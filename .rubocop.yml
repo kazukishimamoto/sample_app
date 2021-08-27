@@ -4,3 +4,7 @@ require:
   - rubocop-rails
 Style/Documentation:
   Enabled: false
+Style/EmptyMethod:
+  Enabled: false
+Style/AsciiComments:
+  Enabled: false
