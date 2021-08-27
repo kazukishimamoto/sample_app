@@ -8,3 +8,11 @@ Style/EmptyMethod:
   Enabled: false
 Style/AsciiComments:
   Enabled: false
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+Naming/PredicateName:
+  Exclude:
+    - 'test/test_helper.rb'
+Rails/HelperInstanceVariable:
+  Exclude:
+    - 'app/helpers/sessions_helper.rb'
