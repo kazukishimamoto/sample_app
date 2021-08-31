@@ -1,18 +1,38 @@
-inherit_from: .rubocop_todo.yml
-
 require:
   - rubocop-rails
-Style/Documentation:
-  Enabled: false
-Style/EmptyMethod:
-  Enabled: false
+
+AllCops:
+    NewCops: enable
+
+# 日本語のコメントを許可する
 Style/AsciiComments:
   Enabled: false
-Layout/EmptyLinesAroundClassBody:
+# ドキュメントの無いpublic classを許可する
+Style/Documentation:
   Enabled: false
+
 Naming/PredicateName:
   Exclude:
     - 'test/test_helper.rb'
+
 Rails/HelperInstanceVariable:
   Exclude:
     - 'app/helpers/sessions_helper.rb'
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'test/channels/application_cable/connection_test.rb'
+    - 'test/test_helper.rb'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/MutableConstant:
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  Exclude:
+    - 'app/models/user.rb'
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
