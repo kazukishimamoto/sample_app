@@ -10,5 +10,4 @@
   },
   // `Format Document`で使用するフォーマッターにrubocopを指定
   "ruby.format": "rubocop",
-  "solargraph.useBundler": true
 }
