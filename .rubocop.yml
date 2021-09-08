@@ -36,3 +36,6 @@ Rails/SkipsModelValidations:
 
 Layout/EmptyLinesAroundClassBody:
   Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
