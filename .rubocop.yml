@@ -20,9 +20,7 @@ Rails/HelperInstanceVariable:
     - 'app/helpers/sessions_helper.rb'
 
 Style/ClassAndModuleChildren:
-  Exclude:
-    - 'test/channels/application_cable/connection_test.rb'
-    - 'test/test_helper.rb'
+  Enabled: false
 
 Style/FrozenStringLiteralComment:
   Enabled: false
