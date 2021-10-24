@@ -29,11 +29,13 @@ Style/MutableConstant:
   Enabled: false
 
 Rails/SkipsModelValidations:
-  Exclude:
-    - 'app/models/user.rb'
+  Enabled: false
 
 Layout/EmptyLinesAroundClassBody:
   Enabled: false
 
 Style/EmptyMethod:
   Enabled: false
+
+Layout/IndentationConsistency:
+  EnforcedStyle: indented_internal_methods
