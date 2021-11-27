@@ -13,6 +13,11 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select 'a[href=?]', root_path, count: 2
     assert_select 'a[href=?]', help_path
     assert_select 'a[href=?]', login_path
+    #  sign up button
+    assert_select 'a[href=?]', signup_path
+    # rails logo
+    assert_select 'a[href=?]', 'https://rubyonrails.org/'
+
     #  ログイン後
     log_in_as(@user)
     get root_path
@@ -24,10 +29,6 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select 'a[href=?]', edit_user_path(@user)
     assert_select 'a[href=?]', logout_path
 
-    #  sign up button
-    assert_select 'a[href=?]', signup_path
-    # rails logo
-    assert_select 'a[href=?]', 'https://rubyonrails.org/'
     #  footer links
     assert_select 'a[href=?]', about_path
     assert_select 'a[href=?]', contact_path
