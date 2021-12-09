@@ -22,7 +22,7 @@ jobs:
           bundle config --local without production
           bundle install
 
-      - name: Assets precompile
-        run: RAILS_ENV=test bundle exec rails assets:precompile
+      # - name: Assets precompile
+        # run: RAILS_ENV=test bundle exec rails assets:precompile
 
       - run: bundle exec rails test
