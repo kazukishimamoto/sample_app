@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - run: exit 1
       - uses: actions/checkout@v2
 
       - uses: ruby/setup-ruby@v1
@@ -33,6 +34,6 @@ jobs:
           bundle config --local without production
           bundle install
 
-        # run: RAILS_ENV=test bundle exec rails assets:precompile
+      - run: RAILS_ENV=test bundle exec rails assets:precompile
 
       - run: bundle exec rails test
