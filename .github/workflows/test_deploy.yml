@@ -4,7 +4,6 @@ on:
   pull_request:
 
 jobs:
-  # This workflow contains a single job called "build"
   test:
     name: Test
     runs-on: ubuntu-latest
@@ -15,6 +14,18 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.6.8
+
+      - name: Cache bundle
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: bundle-v1-${{ hashFiles('Gemfile.lock') }}
+
+      - name: Cache yarn
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: yarn-v1-${{ hashFiles('yarn.lock') }}
 
       - name: Run bundle install
         run: |
